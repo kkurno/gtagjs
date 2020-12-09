@@ -1,2 +1,5 @@
-export { initialize, gtag } from './core';
-export { default } from './core';
+export {
+  default,
+  initialize,
+  gtag,
+} from './core';

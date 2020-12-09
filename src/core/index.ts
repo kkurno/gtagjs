@@ -18,6 +18,9 @@ export const gtag = (command: Command, ...arg: any[]) => {
 
 export const initialize = (id: string, option?: { gtag?: any, lib?: Omit<GtagJsSingletonData, 'id'> }) => {
   if (!checkIsBrowser()) return;
+  if (GtagJsSingleton.getData().id) {
+    warn(ErrorText.ALREADY_INITIALIZED);
+  }
   if (!id) {
     warn(ErrorText.REQUIRE_ID);
     return;
