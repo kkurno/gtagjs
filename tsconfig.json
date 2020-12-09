@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "target": "es5",
+    "module": "es6",
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "moduleResolution": "Node"
+  },
+  "include": ["./src"]
+}
