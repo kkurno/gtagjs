@@ -30,3 +30,5 @@ export const initialize = (id: string, option?: { gtag?: any, lib?: Omit<GtagJsS
 
   addGtagScriptDom(id);
 };
+
+export default { gtag, initialize };
