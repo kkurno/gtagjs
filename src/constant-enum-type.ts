@@ -4,9 +4,11 @@ declare global {
 
 export enum ErrorText {
   REQUIRE_ID = 'ID is required',
+  NEED_INITIALIZATION = 'You need to initialize by running "initialize" function',
 };
 
 export type GtagJsSingletonData = {
+  id: string;
   enableLog: boolean;
 }
 

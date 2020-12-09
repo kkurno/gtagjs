@@ -1,15 +1,15 @@
 import { GtagJsSingletonData } from '../constant-enum-type';
 
 class GtagJsSingleton {
-  private data:GtagJsSingletonData = {
+  private data: Omit<GtagJsSingletonData, 'id'> = {
     enableLog: false,
   }
 
-  getData() {
+  getData(): Omit<GtagJsSingletonData, 'id'> & { id?: string } {
     return this.data;
   }
 
-  setData(newData: GtagJsSingletonData) {
+  setData(newData: Partial<GtagJsSingletonData>) {
     this.data = { ...this.data, ...newData };
   }
 }
