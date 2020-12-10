@@ -26,11 +26,10 @@ export const initialize = (id: string, option?: { gtag?: any, lib?: Omit<GtagJsS
     return;
   }
 
+  GtagJsSingleton.setData({ id, ...(option?.lib ?? {}) });
+
   gtag('js', new Date());
-  gtag('config', id, option?.gtag);
-
-  if (option?.lib) GtagJsSingleton.setData({ id, ...option.lib });
-
+  gtag('config', id, option?.gtag ?? {});
   addGtagScriptDom(id);
 };
 
