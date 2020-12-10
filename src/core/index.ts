@@ -8,10 +8,6 @@ import { addGtagScriptDom } from '../utils/dom';
 
 export function gtag(command: Command, ...arg: any[]) {
   if (!checkIsBrowser()) return;
-  if (!GtagJsSingleton.getData().id) {
-    warn(ErrorText.NEED_INITIALIZATION);
-    return;
-  }
   if (!window.dataLayer) window.dataLayer = [];
   window.dataLayer.push(arguments);
 };

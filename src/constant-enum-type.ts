@@ -13,4 +13,4 @@ export type GtagJsSingletonData = {
   enableLog: boolean;
 }
 
-export type Command = 'js' | 'config' | 'get' | 'set' | 'event'
+export type Command = 'js' | 'config' | 'get' | 'set' | 'event' | 'consent'
